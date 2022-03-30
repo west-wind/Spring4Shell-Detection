@@ -1,5 +1,5 @@
 # Spring4Shell-Detection
-Lazy SPL to detect Spring4Shell exploitation
+Lazy SPL to detect Spring4Shell & CVE-2022-22963 exploitation
 
 Detecting from Linux syslog (CVE-2022-22963, not Spring4Shell)
 ```sh
