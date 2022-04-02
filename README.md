@@ -1,6 +1,7 @@
 # Spring4Shell-Detection
 Lazy SPL to detect CVE-2022-22965 - Spring4Shell & CVE-2022-22963 exploitation
 
+Read my write up here [Detecting & Responding to Spring4Shell with Splunk | Medium](https://subtlystoic.medium.com/detecting-and-responding-to-spring4shell-with-splunk-89ade99f35fb)
 
 Splunk detection SPL for CVE-2022-22965 (Spring4Shell) webshell -- https://github.com/craig/SpringCore0day 
 ```sh
