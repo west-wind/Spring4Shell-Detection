@@ -2,7 +2,7 @@
 Lazy SPL to detect CVE-2022-22965 - Spring4Shell & CVE-2022-22963 exploitation
 
 
-Detection for CVE-2022-22965 (Spring4Shell) webshell -- https://github.com/craig/SpringCore0day 
+Splunk detection SPL for CVE-2022-22965 (Spring4Shell) webshell -- https://github.com/craig/SpringCore0day 
 ```sh
 index=web_apps (sourcetype=nginx OR sourcetype=webapp_firewall) status=200
 | rex field=url "(?<webShell>\/.*\.(jsp|class)\?.*=.*)" 
@@ -12,7 +12,7 @@ index=web_apps (sourcetype=nginx OR sourcetype=webapp_firewall) status=200
 | table _time src_ip Domain status method webShell fullURL sourcetype
 ```
 
-Detection for CVE-2022-22965 (Spring4Shell) POC exploit attempting to change Tomcat logging
+Splunk detection SPL for CVE-2022-22965 (Spring4Shell) POC exploit attempting to change Tomcat logging
 ```sh
 index=web_apps (sourcetype=nginx OR sourcetype=webapp_firewall) (method=POST OR method=GET) url="*?class.module.classloader.resources.context.parent.pipeline.first.pattern=*"
 | table _time src_ip dest_domain url headers user_agent status
