@@ -24,6 +24,14 @@ index=web_apps (sourcetype=nginx OR sourcetype=webapp_firewall) (method=POST OR 
 | table _time src_ip dest_domain url headers user_agent status
 ```
 
+Detection based on Linux audit logs (untested). 
+
+If you find suspicious files being created, correlate with type=CWD & check the 'cwd' path. Check if the path is your webapps' ROOT/ directory. Correlate with other above detection rules (nginx/web app firewall) to identify source IP. 
+```sh
+index=linux_index sourcetype="linux:auditd" type=PATH name="*.jsp"
+| table _time host type name
+```
+
 Detection for CVE-2022-22965 (Spring4Shell) [PoC Exploit](https://github.com/craig/SpringCore0day)
 ```sh
 index=web_apps (sourcetype=nginx OR sourcetype=webapp_firewall) status=200 (method=POST OR method=GET) (url=*.jsp* OR url=*.class*)
