@@ -1,5 +1,7 @@
 # Spring4Shell-Detection with Splunk
-Lazy SPL to detect CVE-2022-22965 - Spring4Shell & CVE-2022-22963 exploitation
+Lazy SPL to detect CVE-2022-22965 - Spring4Shell & CVE-2022-22963 exploitation.
+
+[Find more awesome Threat Hunting SPL queries, including BPFDoor detection here](https://github.com/west-wind/Threat-Hunting-With-Splunk)
 
 ## Detecting & Responding to Spring4Shell with Splunk | Medium
 
